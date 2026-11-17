@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "columntrace"
+version = "0.2.0"
+description = "Read-only table and column lineage, liveness and impact analysis for Microsoft Fabric git item definitions"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["sqlglot>=25"]
+keywords = ["microsoft-fabric", "lineage", "column-lineage", "data-lineage", "impact-analysis", "sqlglot", "lakehouse"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+sql = ["pyodbc"]          # export-schema / export-table against a lakehouse SQL endpoint
+onelake = ["deltalake"]   # export-delta: a config table read from OneLake, long text whole
+
+[project.scripts]
+columntrace = "columntrace.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+extend-exclude = ["fixtures/synthetic_workspace", "ui"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E731"]   # small lambdas assigned to names read well in the walkers
+
+[tool.ruff.lint.per-file-ignores]
+"tools/make_fixtures.py" = ["E501"]   # notebook sources and ground-truth rows read better on one line
+"tests/*" = ["E501"]
+"tools/check_public.py" = ["E501"]   # the leak patterns stay one per line

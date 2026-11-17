@@ -1,0 +1,79 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "run_ingest",
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "00000000-0000-0000-0000-000000000001",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      {
+        "name": "run_silver_orders",
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "00000000-0000-0000-0000-000000000002",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "dependsOn": [
+          {
+            "activity": "run_ingest",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "call_copy",
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "pipelineId": "00000000-0000-0000-0000-000000001002",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      {
+        "name": "for_each_cfg",
+        "type": "ForEach",
+        "typeProperties": {
+          "items": {
+            "value": "@pipeline().parameters.items",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "name": "run_gold",
+              "type": "TridentNotebook",
+              "typeProperties": {
+                "notebookId": "00000000-0000-0000-0000-000000000004",
+                "workspaceId": "00000000-0000-0000-0000-000000000000"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "if_full_load",
+        "type": "IfCondition",
+        "typeProperties": {
+          "expression": {
+            "value": "@true",
+            "type": "Expression"
+          },
+          "ifTrueActivities": [
+            {
+              "name": "run_generic",
+              "type": "TridentNotebook",
+              "typeProperties": {
+                "notebookId": "00000000-0000-0000-0000-000000000008",
+                "workspaceId": "00000000-0000-0000-0000-000000000000"
+              }
+            }
+          ],
+          "ifFalseActivities": []
+        }
+      }
+    ]
+  }
+}

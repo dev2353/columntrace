@@ -1,0 +1,3383 @@
+{
+ "meta": {
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-24T00:00:00+00:00",
+  "stats": {
+   "nodes": 77,
+   "edges": 92,
+   "nodesByType": {
+    "notebook": 27,
+    "pipeline": 3,
+    "table": 36,
+    "unknown": 8,
+    "semantic_table": 3
+   },
+   "edgesByKind": {
+    "writes": 34,
+    "reads": 43,
+    "calls": 10,
+    "references": 2,
+    "binds": 3
+   },
+   "edgesByConfidence": {
+    "inferred": 15,
+    "parsed": 69,
+    "unresolved": 8
+   },
+   "warnings": 5
+  },
+  "annotations": {
+   "lakehouse": {
+    "checked": 34,
+    "missing": 18,
+    "defaultSchema": "dbo"
+   },
+   "liveness": {
+    "liveness": {
+     "notebook:called": 1,
+     "notebook:dead-end": 16,
+     "notebook:entry-point": 2,
+     "notebook:feeds-others": 4,
+     "notebook:orchestrated": 4,
+     "pipeline:orchestrated": 1,
+     "pipeline:scheduled": 1,
+     "pipeline:uncalled": 1
+    },
+    "families": 1,
+    "datesMatched": 30,
+    "datesAvailable": 30,
+    "itemsWithoutDate": 0,
+    "stale": 2,
+    "staleDays": 365
+   }
+  },
+  "inputs": {
+   "dates": {
+    "source": "synthetic",
+    "branch": "main",
+    "fetchedAt": "2026-10-24T00:00:00+00:00"
+   },
+   "schema": {
+    "source": "synthetic",
+    "exportedAt": "2026-10-24T00:00:00+00:00"
+   },
+   "configTables": [
+    {
+     "source": "sql-endpoint-table",
+     "table": "cfg.silver_load",
+     "exportedAt": "2026-10-24T00:00:00+00:00"
+    }
+   ]
+  }
+ },
+ "nodes": [
+  {
+   "id": "notebook:nb_broken_syntax",
+   "type": "notebook",
+   "name": "nb_broken_syntax",
+   "path": "notebooks/nb_broken_syntax.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000010",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 1,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 1,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_chain_write",
+   "type": "notebook",
+   "name": "nb_chain_write",
+   "path": "notebooks/nb_chain_write.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000025",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_col_expr",
+   "type": "notebook",
+   "name": "nb_col_expr",
+   "path": "notebooks/nb_col_expr.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000018",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_custom_silver",
+   "type": "notebook",
+   "name": "nb_custom_silver",
+   "path": "notebooks/nb_custom_silver.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000023",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "called",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_delta_api",
+   "type": "notebook",
+   "name": "nb_delta_api",
+   "path": "notebooks/nb_delta_api.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000011",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "feeds-others",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_duckdb_report",
+   "type": "notebook",
+   "name": "nb_duckdb_report",
+   "path": "notebooks/nb_duckdb_report.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000014",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_dynamic_export",
+   "type": "notebook",
+   "name": "nb_dynamic_export",
+   "path": "notebooks/nb_dynamic_export.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000005",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_four_part",
+   "type": "notebook",
+   "name": "nb_four_part",
+   "path": "notebooks/nb_four_part.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000016",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_generic_load",
+   "type": "notebook",
+   "name": "nb_generic_load",
+   "path": "notebooks/nb_generic_load.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000008",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "orchestrated",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_gold_revenue",
+   "type": "notebook",
+   "name": "nb_gold_revenue",
+   "path": "notebooks/nb_gold_revenue.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000004",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 6,
+    "liveness": "orchestrated",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_helper_loader",
+   "type": "notebook",
+   "name": "nb_helper_loader",
+   "path": "notebooks/nb_helper_loader.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000006",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "feeds-others",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_ingest_orders",
+   "type": "notebook",
+   "name": "nb_ingest_orders",
+   "path": "notebooks/nb_ingest_orders.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000001",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "orchestrated",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_literal_sql",
+   "type": "notebook",
+   "name": "nb_literal_sql",
+   "path": "notebooks/nb_literal_sql.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000015",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 1,
+    "refs": 1,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_merge_explicit",
+   "type": "notebook",
+   "name": "nb_merge_explicit",
+   "path": "notebooks/nb_merge_explicit.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000020",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_mlv_orders",
+   "type": "notebook",
+   "name": "nb_mlv_orders",
+   "path": "notebooks/nb_mlv_orders.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000013",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 1,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_no_tables",
+   "type": "notebook",
+   "name": "nb_no_tables",
+   "path": "notebooks/nb_no_tables.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000012",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 0,
+    "liveness": "dead-end",
+    "lastChange": "2023-05-01T09:00:00Z",
+    "commit": "dddd0004",
+    "commitSpread": 1,
+    "ageDays": 1271,
+    "stale": true
+   }
+  },
+  {
+   "id": "notebook:nb_orchestrator",
+   "type": "notebook",
+   "name": "nb_orchestrator",
+   "path": "notebooks/nb_orchestrator.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000007",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 2,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 0,
+    "liveness": "entry-point",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_param_pipeline",
+   "type": "notebook",
+   "name": "nb_param_pipeline",
+   "path": "notebooks/nb_param_pipeline.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000024",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 2,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 5,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_report_view",
+   "type": "notebook",
+   "name": "nb_report_view",
+   "path": "notebooks/nb_report_view.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000009",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 1,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "dead-end",
+    "lastChange": "2024-02-01T09:00:00Z",
+    "commit": "eeee0005",
+    "commitSpread": 1,
+    "ageDays": 995,
+    "stale": true
+   }
+  },
+  {
+   "id": "notebook:nb_silver_customers",
+   "type": "notebook",
+   "name": "nb_silver_customers",
+   "path": "notebooks/nb_silver_customers.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000003",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "feeds-others",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_silver_loader",
+   "type": "notebook",
+   "name": "nb_silver_loader",
+   "path": "notebooks/nb_silver_loader.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000022",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 1,
+    "refs": 2,
+    "liveness": "entry-point",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_silver_orders",
+   "type": "notebook",
+   "name": "nb_silver_orders",
+   "path": "notebooks/nb_silver_orders.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000002",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 2,
+    "sqlCells": 1,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "orchestrated",
+    "lastChange": "2026-01-10T09:00:00Z",
+    "commit": "bbbb0002",
+    "commitSpread": 1,
+    "ageDays": 286,
+    "stale": false,
+    "family": "nb_silver_orders",
+    "familyMembers": 2,
+    "newestInFamily": false
+   }
+  },
+  {
+   "id": "notebook:nb_silver_orders_python",
+   "type": "notebook",
+   "name": "nb_silver_orders_python",
+   "path": "notebooks/nb_silver_orders_python.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000017",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 2,
+    "sqlCells": 1,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "feeds-others",
+    "lastChange": "2026-09-01T09:00:00Z",
+    "commit": "cccc0003",
+    "commitSpread": 1,
+    "ageDays": 52,
+    "stale": false,
+    "family": "nb_silver_orders",
+    "familyMembers": 2,
+    "newestInFamily": true
+   }
+  },
+  {
+   "id": "notebook:nb_sql_helpers",
+   "type": "notebook",
+   "name": "nb_sql_helpers",
+   "path": "notebooks/nb_sql_helpers.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000027",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 10,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_star_unknown",
+   "type": "notebook",
+   "name": "nb_star_unknown",
+   "path": "notebooks/nb_star_unknown.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000021",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 2,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_union_by_name",
+   "type": "notebook",
+   "name": "nb_union_by_name",
+   "path": "notebooks/nb_union_by_name.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000026",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 2,
+    "sqlCells": 1,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "notebook:nb_union_events",
+   "type": "notebook",
+   "name": "nb_union_events",
+   "path": "notebooks/nb_union_events.Notebook",
+   "itemId": "00000000-0000-0000-0000-000000000019",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "cells": 1,
+    "sqlCells": 0,
+    "parseErrors": 0,
+    "fallbackSql": 0,
+    "unresolvedSql": 0,
+    "refs": 3,
+    "liveness": "dead-end",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "pipeline:pl_copy",
+   "type": "pipeline",
+   "name": "pl_copy",
+   "path": "pipelines/pl_copy.DataPipeline",
+   "itemId": "00000000-0000-0000-0000-000000001002",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "activities": 3,
+    "liveness": "orchestrated",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "pipeline:pl_dynamic",
+   "type": "pipeline",
+   "name": "pl_dynamic",
+   "path": "pipelines/pl_dynamic.DataPipeline",
+   "itemId": "00000000-0000-0000-0000-000000001003",
+   "meta": {
+    "schedules": {
+     "enabled": 0,
+     "total": 0
+    },
+    "parsed": true,
+    "activities": 2,
+    "liveness": "uncalled",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "pipeline:pl_main",
+   "type": "pipeline",
+   "name": "pl_main",
+   "path": "pipelines/pl_main.DataPipeline",
+   "itemId": "00000000-0000-0000-0000-000000001001",
+   "meta": {
+    "schedules": {
+     "enabled": 1,
+     "total": 2
+    },
+    "parsed": true,
+    "activities": 7,
+    "liveness": "scheduled",
+    "lastChange": "2026-10-01T09:00:00Z",
+    "commit": "aaaa0001",
+    "commitSpread": 26,
+    "ageDays": 22,
+    "stale": false
+   }
+  },
+  {
+   "id": "semantic_table:Shop Model.Dim Customers",
+   "type": "semantic_table",
+   "name": "Shop Model.Dim Customers",
+   "path": "semantic/Shop Model.SemanticModel/definition/tables/dim_customers.tmdl",
+   "itemId": "00000000-0000-0000-0000-000000002001",
+   "meta": {
+    "model": "Shop Model",
+    "mode": "directLake",
+    "measures": 0
+   }
+  },
+  {
+   "id": "semantic_table:Shop Model.orders_import",
+   "type": "semantic_table",
+   "name": "Shop Model.orders_import",
+   "path": "semantic/Shop Model.SemanticModel/definition/tables/orders_import.tmdl",
+   "itemId": "00000000-0000-0000-0000-000000002001",
+   "meta": {
+    "model": "Shop Model",
+    "mode": "import",
+    "measures": 0
+   }
+  },
+  {
+   "id": "semantic_table:Shop Model.revenue_daily",
+   "type": "semantic_table",
+   "name": "Shop Model.revenue_daily",
+   "path": "semantic/Shop Model.SemanticModel/definition/tables/revenue_daily.tmdl",
+   "itemId": "00000000-0000-0000-0000-000000002001",
+   "meta": {
+    "model": "Shop Model",
+    "mode": "directLake",
+    "measures": 1
+   }
+  },
+  {
+   "id": "source:shop.customers",
+   "type": "table",
+   "name": "SHOP:Customers",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "external": true,
+    "system": "SHOP"
+   }
+  },
+  {
+   "id": "source:shop.orders",
+   "type": "table",
+   "name": "SHOP:Orders",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "external": true,
+    "system": "SHOP"
+   }
+  },
+  {
+   "id": "table:bronze_shop.customers",
+   "type": "table",
+   "name": "bronze_shop.customers",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:bronze_shop.orders",
+   "type": "table",
+   "name": "bronze_shop.orders",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:cfg.load_cfg",
+   "type": "table",
+   "name": "cfg.load_cfg",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:cfg.silver_load",
+   "type": "table",
+   "name": "cfg.silver_load",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:dwh_stage.revenue_daily",
+   "type": "table",
+   "name": "dwh_stage.revenue_daily",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:gold_shop.all_events",
+   "type": "table",
+   "name": "gold_shop.all_events",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:gold_shop.copy_unknown",
+   "type": "table",
+   "name": "gold_shop.copy_unknown",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:gold_shop.export_tbl",
+   "type": "table",
+   "name": "gold_shop.export_tbl",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:gold_shop.four_part_out",
+   "type": "table",
+   "name": "gold_shop.four_part_out",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:gold_shop.helper_out",
+   "type": "table",
+   "name": "gold_shop.helper_out",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:gold_shop.loop_out",
+   "type": "table",
+   "name": "gold_shop.loop_out",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:gold_shop.order_flags",
+   "type": "table",
+   "name": "gold_shop.order_flags",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:gold_shop.orders_adjusted",
+   "type": "table",
+   "name": "gold_shop.orders_adjusted",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:gold_shop.orders_mlv",
+   "type": "table",
+   "name": "gold_shop.orders_mlv",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:gold_shop.orders_snapshot",
+   "type": "table",
+   "name": "gold_shop.orders_snapshot",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:gold_shop.report_cache",
+   "type": "table",
+   "name": "gold_shop.report_cache",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:gold_shop.revenue_daily",
+   "type": "table",
+   "name": "gold_shop.revenue_daily",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:gold_shop.stale_rows",
+   "type": "table",
+   "name": "gold_shop.stale_rows",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:gold_shop.v_revenue",
+   "type": "table",
+   "name": "gold_shop.v_revenue",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:silver_shop.broken_out",
+   "type": "table",
+   "name": "silver_shop.broken_out",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:silver_shop.chain_out",
+   "type": "table",
+   "name": "silver_shop.chain_out",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:silver_shop.custom_out",
+   "type": "table",
+   "name": "silver_shop.custom_out",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:silver_shop.customers",
+   "type": "table",
+   "name": "silver_shop.customers",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:silver_shop.order_totals",
+   "type": "table",
+   "name": "silver_shop.order_totals",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:silver_shop.orders",
+   "type": "table",
+   "name": "silver_shop.orders",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:silver_shop.orders_cfg",
+   "type": "table",
+   "name": "silver_shop.orders_cfg",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:silver_shop.param_out",
+   "type": "table",
+   "name": "silver_shop.param_out",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:silver_shop.totals_cfg",
+   "type": "table",
+   "name": "silver_shop.totals_cfg",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:staging.a",
+   "type": "table",
+   "name": "staging.a",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:staging.adjustments",
+   "type": "table",
+   "name": "staging.adjustments",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:staging.b",
+   "type": "table",
+   "name": "staging.b",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:staging.incoming",
+   "type": "table",
+   "name": "staging.incoming",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "table:staging.orders_raw",
+   "type": "table",
+   "name": "staging.orders_raw",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": true
+   }
+  },
+  {
+   "id": "table:unknown_schema.t",
+   "type": "table",
+   "name": "unknown_schema.t",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "inLakehouse": false
+   }
+  },
+  {
+   "id": "unresolved:dwh_stage.@pipeline().parameters.TargetTable",
+   "type": "unknown",
+   "name": "dwh_stage.@pipeline().parameters.TargetTable",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  },
+  {
+   "id": "unresolved:notebook:ffffffff-0000-0000-0000-000000000000",
+   "type": "unknown",
+   "name": "notebook:ffffffff-0000-0000-0000-000000000000",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  },
+  {
+   "id": "unresolved:notebook:nb_missing_nb",
+   "type": "unknown",
+   "name": "notebook:nb_missing_nb",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  },
+  {
+   "id": "unresolved:silver_shop.{t}",
+   "type": "unknown",
+   "name": "silver_shop.{t}",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  },
+  {
+   "id": "unresolved:{dest}",
+   "type": "unknown",
+   "name": "{dest}",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  },
+  {
+   "id": "unresolved:{output_name}",
+   "type": "unknown",
+   "name": "{output_name}",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  },
+  {
+   "id": "unresolved:{row['dest_schema']}.{row['dest_table']}",
+   "type": "unknown",
+   "name": "{row['dest_schema']}.{row['dest_table']}",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  },
+  {
+   "id": "unresolved:{target}",
+   "type": "unknown",
+   "name": "{target}",
+   "path": null,
+   "itemId": null,
+   "meta": {
+    "reason": "dynamic or unresolvable reference"
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "notebook:nb_broken_syntax",
+   "to": "table:silver_shop.broken_out",
+   "kind": "writes",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "file": "notebooks/nb_broken_syntax.Notebook/notebook-content.py",
+     "line": 10,
+     "via": "saveAsTable (regex)",
+     "snippet": "silver_shop.broken_out"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_chain_write",
+   "to": "table:bronze_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_chain_write.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: SELECT order_id, amount FROM bronze_shop.orders",
+     "snippet": "bronze_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_chain_write",
+   "to": "table:silver_shop.chain_out",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_chain_write.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "saveAsTable",
+     "snippet": "silver_shop.chain_out"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_col_expr",
+   "to": "table:gold_shop.order_flags",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_col_expr.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.order_flags (order_id, is_big, label)",
+     "snippet": "gold_shop.order_flags"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_col_expr",
+   "to": "table:silver_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_col_expr.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.order_flags (order_id, is_big, label)",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_col_expr",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_col_expr.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.order_flags (order_id, is_big, label)",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_custom_silver",
+   "to": "table:bronze_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_custom_silver.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: SELECT * FROM bronze_shop.orders",
+     "snippet": "bronze_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_custom_silver",
+   "to": "table:silver_shop.custom_out",
+   "kind": "writes",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.silver_load",
+     "id": 2,
+     "via": "config table"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_custom_silver",
+   "to": "unresolved:{target}",
+   "kind": "writes",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "notebooks/nb_custom_silver.Notebook/notebook-content.py",
+     "line": 13,
+     "via": "saveAsTable",
+     "snippet": "{target}"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_delta_api",
+   "to": "table:gold_shop.export_tbl",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_delta_api.Notebook/notebook-content.py",
+     "line": 15,
+     "via": "write_deltalake",
+     "snippet": "gold_shop.export_tbl"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_delta_api",
+   "to": "table:silver_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_delta_api.Notebook/notebook-content.py",
+     "line": 16,
+     "via": "DeltaTable",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_delta_api",
+   "to": "table:silver_shop.orders",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_delta_api.Notebook/notebook-content.py",
+     "line": 13,
+     "via": "DeltaTable.forName",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_duckdb_report",
+   "to": "table:gold_shop.report_cache",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_duckdb_report.Notebook/notebook-content.py",
+     "line": 18,
+     "via": "execute_mutation_sql: DELETE FROM gold_shop.report_cache WHERE region IS NOT NULL",
+     "snippet": "gold_shop.report_cache"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_duckdb_report",
+   "to": "table:gold_shop.revenue_daily",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_duckdb_report.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "execute_query: SELECT region, SUM(amount) AS total",
+     "snippet": "gold_shop.revenue_daily"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_duckdb_report",
+   "to": "table:silver_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_duckdb_report.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "execute_query: SELECT region, SUM(amount) AS total",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_dynamic_export",
+   "to": "unresolved:silver_shop.{t}",
+   "kind": "reads",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "notebooks/nb_dynamic_export.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "spark.table",
+     "snippet": "silver_shop.{t}"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_dynamic_export",
+   "to": "unresolved:{output_name}",
+   "kind": "writes",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "notebooks/nb_dynamic_export.Notebook/notebook-content.py",
+     "line": 15,
+     "via": "saveAsTable",
+     "snippet": "{output_name}"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_four_part",
+   "to": "table:gold_shop.four_part_out",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_four_part.Notebook/notebook-content.py",
+     "line": 13,
+     "via": "spark.sql: INSERT INTO shop_lh.gold_shop.four_part_out SELECT * FROM silver_shop.customers",
+     "snippet": "gold_shop.four_part_out"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_four_part",
+   "to": "table:silver_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_four_part.Notebook/notebook-content.py",
+     "line": 13,
+     "via": "spark.sql: INSERT INTO shop_lh.gold_shop.four_part_out SELECT * FROM silver_shop.customers",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_four_part",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_four_part.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: SELECT * FROM `Contoso WS`.shop_lh.silver_shop.orders",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_generic_load",
+   "to": "source:shop.customers",
+   "kind": "reads",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.load_cfg",
+     "id": 2,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_generic_load",
+   "to": "source:shop.orders",
+   "kind": "reads",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.load_cfg",
+     "id": 1,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_generic_load",
+   "to": "table:bronze_shop.customers",
+   "kind": "writes",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.load_cfg",
+     "id": 2,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_generic_load",
+   "to": "table:bronze_shop.orders",
+   "kind": "writes",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.load_cfg",
+     "id": 1,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_generic_load",
+   "to": "table:cfg.load_cfg",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_generic_load.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "lakehouse_table_path",
+     "snippet": "cfg.load_cfg"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_generic_load",
+   "to": "table:staging.incoming",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_generic_load.Notebook/notebook-content.py",
+     "line": 15,
+     "via": "spark.sql: INSERT INTO __dyn0__.__dyn1__ SELECT * FROM staging.incoming",
+     "snippet": "staging.incoming"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_generic_load",
+   "to": "unresolved:{row['dest_schema']}.{row['dest_table']}",
+   "kind": "writes",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "notebooks/nb_generic_load.Notebook/notebook-content.py",
+     "line": 15,
+     "via": "spark.sql: INSERT INTO __dyn0__.__dyn1__ SELECT * FROM staging.incoming",
+     "snippet": "{row['dest_schema']}.{row['dest_table']}"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_gold_revenue",
+   "to": "table:gold_shop.revenue_daily",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_gold_revenue.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "SQL string: INSERT OVERWRITE TABLE gold_shop.revenue_daily",
+     "snippet": "gold_shop.revenue_daily"
+    },
+    {
+     "file": "notebooks/nb_gold_revenue.Notebook/notebook-content.py",
+     "line": 21,
+     "via": "spark.sql: INSERT OVERWRITE TABLE gold_shop.revenue_daily",
+     "snippet": "gold_shop.revenue_daily"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_gold_revenue",
+   "to": "table:silver_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_gold_revenue.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "SQL string: INSERT OVERWRITE TABLE gold_shop.revenue_daily",
+     "snippet": "silver_shop.customers"
+    },
+    {
+     "file": "notebooks/nb_gold_revenue.Notebook/notebook-content.py",
+     "line": 21,
+     "via": "spark.sql: INSERT OVERWRITE TABLE gold_shop.revenue_daily",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_gold_revenue",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_gold_revenue.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "SQL string: INSERT OVERWRITE TABLE gold_shop.revenue_daily",
+     "snippet": "silver_shop.orders"
+    },
+    {
+     "file": "notebooks/nb_gold_revenue.Notebook/notebook-content.py",
+     "line": 21,
+     "via": "spark.sql: INSERT OVERWRITE TABLE gold_shop.revenue_daily",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_helper_loader",
+   "to": "table:gold_shop.orders_snapshot",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_helper_loader.Notebook/notebook-content.py",
+     "line": 13,
+     "via": "write_lakehouse_table_path",
+     "snippet": "gold_shop.orders_snapshot"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_helper_loader",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_helper_loader.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "read_lakehouse_table_path",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_ingest_orders",
+   "to": "table:bronze_shop.orders",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_ingest_orders.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO bronze_shop.orders",
+     "snippet": "bronze_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_ingest_orders",
+   "to": "table:staging.orders_raw",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_ingest_orders.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO bronze_shop.orders",
+     "snippet": "staging.orders_raw"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_literal_sql",
+   "to": "table:gold_shop.stale_rows",
+   "kind": "writes",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "file": "notebooks/nb_literal_sql.Notebook/notebook-content.py",
+     "line": 13,
+     "via": "SQL string: DELETE FROM gold_shop.stale_rows WHERE age > 30",
+     "snippet": "gold_shop.stale_rows"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_literal_sql",
+   "to": "table:silver_shop.customers",
+   "kind": "references",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "file": "notebooks/nb_literal_sql.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "string literal",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_literal_sql",
+   "to": "table:silver_shop.orders",
+   "kind": "references",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "file": "notebooks/nb_literal_sql.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "string literal",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_merge_explicit",
+   "to": "table:silver_shop.order_totals",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_merge_explicit.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: MERGE INTO silver_shop.order_totals AS t",
+     "snippet": "silver_shop.order_totals"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_merge_explicit",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_merge_explicit.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: MERGE INTO silver_shop.order_totals AS t",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_mlv_orders",
+   "to": "table:gold_shop.orders_mlv",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_mlv_orders.Notebook/notebook-content.py",
+     "line": 10,
+     "via": "%%sql: CREATE OR REPLACE MATERIALIZED LAKE VIEW gold_shop.orders_mlv",
+     "snippet": "gold_shop.orders_mlv"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_mlv_orders",
+   "to": "table:silver_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_mlv_orders.Notebook/notebook-content.py",
+     "line": 10,
+     "via": "%%sql: CREATE OR REPLACE MATERIALIZED LAKE VIEW gold_shop.orders_mlv",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_mlv_orders",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_mlv_orders.Notebook/notebook-content.py",
+     "line": 10,
+     "via": "%%sql: CREATE OR REPLACE MATERIALIZED LAKE VIEW gold_shop.orders_mlv",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_orchestrator",
+   "to": "notebook:nb_gold_revenue",
+   "kind": "calls",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_orchestrator.Notebook/notebook-content.py",
+     "line": 25,
+     "via": "%run",
+     "snippet": "nb_gold_revenue"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_orchestrator",
+   "to": "notebook:nb_silver_orders",
+   "kind": "calls",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_orchestrator.Notebook/notebook-content.py",
+     "line": 13,
+     "via": "notebook.run",
+     "snippet": "nb_silver_orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_orchestrator",
+   "to": "unresolved:notebook:nb_missing_nb",
+   "kind": "calls",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "notebooks/nb_orchestrator.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "notebook.run",
+     "snippet": "nb_missing_nb"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_param_pipeline",
+   "to": "table:bronze_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_param_pipeline.Notebook/notebook-content.py",
+     "line": 25,
+     "via": "SQL string: SELECT o.order_id, UPPER(c.region) AS region",
+     "snippet": "bronze_shop.customers"
+    },
+    {
+     "file": "notebooks/nb_param_pipeline.Notebook/notebook-content.py",
+     "line": 30,
+     "via": "spark.sql: SELECT o.order_id, UPPER(c.region) AS region",
+     "snippet": "bronze_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_param_pipeline",
+   "to": "table:bronze_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_param_pipeline.Notebook/notebook-content.py",
+     "line": 25,
+     "via": "SQL string: SELECT o.order_id, UPPER(c.region) AS region",
+     "snippet": "bronze_shop.orders"
+    },
+    {
+     "file": "notebooks/nb_param_pipeline.Notebook/notebook-content.py",
+     "line": 30,
+     "via": "spark.sql: SELECT o.order_id, UPPER(c.region) AS region",
+     "snippet": "bronze_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_param_pipeline",
+   "to": "table:silver_shop.param_out",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_param_pipeline.Notebook/notebook-content.py",
+     "line": 32,
+     "via": "saveAsTable",
+     "snippet": "silver_shop.param_out"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_report_view",
+   "to": "table:gold_shop.revenue_daily",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_report_view.Notebook/notebook-content.sql",
+     "line": 9,
+     "via": "sql notebook: CREATE OR REPLACE VIEW gold_shop.v_revenue AS",
+     "snippet": "gold_shop.revenue_daily"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_report_view",
+   "to": "table:gold_shop.v_revenue",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_report_view.Notebook/notebook-content.sql",
+     "line": 9,
+     "via": "sql notebook: CREATE OR REPLACE VIEW gold_shop.v_revenue AS",
+     "snippet": "gold_shop.v_revenue"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_customers",
+   "to": "table:bronze_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_customers.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: MERGE INTO silver_shop.customers AS t",
+     "snippet": "bronze_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_customers",
+   "to": "table:silver_shop.customers",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_customers.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: MERGE INTO silver_shop.customers AS t",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "notebook:nb_custom_silver",
+   "kind": "calls",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.silver_load",
+     "id": 2,
+     "via": "config table"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "table:bronze_shop.customers",
+   "kind": "reads",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.silver_load",
+     "id": 1,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "table:bronze_shop.orders",
+   "kind": "reads",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.silver_load",
+     "id": 1,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "table:cfg.silver_load",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_loader.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "lakehouse_table_path",
+     "snippet": "cfg.silver_load"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.silver_load",
+     "id": 4,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "table:silver_shop.orders_cfg",
+   "kind": "writes",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.silver_load",
+     "id": 1,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "table:silver_shop.totals_cfg",
+   "kind": "writes",
+   "confidence": "inferred",
+   "evidence": [
+    {
+     "config": "cfg.silver_load",
+     "id": 4,
+     "via": "config resolver"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_loader",
+   "to": "unresolved:{dest}",
+   "kind": "writes",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_loader.Notebook/notebook-content.py",
+     "line": 15,
+     "via": "saveAsTable",
+     "snippet": "{dest}"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_orders",
+   "to": "table:bronze_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_orders.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "%%sql: CREATE OR REPLACE TEMP VIEW v_orders AS",
+     "snippet": "bronze_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_orders",
+   "to": "table:bronze_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_orders.Notebook/notebook-content.py",
+     "line": 14,
+     "via": "%%sql: CREATE OR REPLACE TEMP VIEW v_orders AS",
+     "snippet": "bronze_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_orders",
+   "to": "table:silver_shop.orders",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_orders.Notebook/notebook-content.py",
+     "line": 32,
+     "via": "saveAsTable",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_orders_python",
+   "to": "table:bronze_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_orders_python.Notebook/notebook-content.py",
+     "line": 10,
+     "via": "%%sql: CREATE OR REPLACE TEMP VIEW v_orders AS",
+     "snippet": "bronze_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_orders_python",
+   "to": "table:bronze_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_orders_python.Notebook/notebook-content.py",
+     "line": 10,
+     "via": "%%sql: CREATE OR REPLACE TEMP VIEW v_orders AS",
+     "snippet": "bronze_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_silver_orders_python",
+   "to": "table:silver_shop.orders",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_silver_orders_python.Notebook/notebook-content.py",
+     "line": 28,
+     "via": "saveAsTable",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_sql_helpers",
+   "to": "table:gold_shop.helper_out",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 17,
+     "via": "run_sql(): INSERT INTO gold_shop.helper_out SELECT order_id, amount FROM silver_shop.orders",
+     "snippet": "gold_shop.helper_out"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_sql_helpers",
+   "to": "table:gold_shop.loop_out",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 20,
+     "via": "SQL string: INSERT INTO gold_shop.loop_out SELECT order_id FROM silver_shop.orders",
+     "snippet": "gold_shop.loop_out"
+    },
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 21,
+     "via": "SQL string: INSERT INTO gold_shop.loop_out SELECT customer_id AS order_id FROM silver_shop.customers",
+     "snippet": "gold_shop.loop_out"
+    },
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 24,
+     "via": "spark.sql: INSERT INTO gold_shop.loop_out SELECT order_id FROM silver_shop.orders",
+     "snippet": "gold_shop.loop_out"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_sql_helpers",
+   "to": "table:silver_shop.customers",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 21,
+     "via": "SQL string: INSERT INTO gold_shop.loop_out SELECT customer_id AS order_id FROM silver_shop.customers",
+     "snippet": "silver_shop.customers"
+    },
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 24,
+     "via": "spark.sql: INSERT INTO gold_shop.loop_out SELECT customer_id AS order_id FROM silver_shop.customers",
+     "snippet": "silver_shop.customers"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_sql_helpers",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 17,
+     "via": "run_sql(): INSERT INTO gold_shop.helper_out SELECT order_id, amount FROM silver_shop.orders",
+     "snippet": "silver_shop.orders"
+    },
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 20,
+     "via": "SQL string: INSERT INTO gold_shop.loop_out SELECT order_id FROM silver_shop.orders",
+     "snippet": "silver_shop.orders"
+    },
+    {
+     "file": "notebooks/nb_sql_helpers.Notebook/notebook-content.py",
+     "line": 24,
+     "via": "spark.sql: INSERT INTO gold_shop.loop_out SELECT order_id FROM silver_shop.orders",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_star_unknown",
+   "to": "table:gold_shop.copy_unknown",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_star_unknown.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.copy_unknown SELECT * FROM unknown_schema.t",
+     "snippet": "gold_shop.copy_unknown"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_star_unknown",
+   "to": "table:unknown_schema.t",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_star_unknown.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.copy_unknown SELECT * FROM unknown_schema.t",
+     "snippet": "unknown_schema.t"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_union_by_name",
+   "to": "table:gold_shop.orders_adjusted",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_union_by_name.Notebook/notebook-content.py",
+     "line": 34,
+     "via": "saveAsTable",
+     "snippet": "gold_shop.orders_adjusted"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_union_by_name",
+   "to": "table:silver_shop.orders",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_union_by_name.Notebook/notebook-content.py",
+     "line": 10,
+     "via": "%%sql: CREATE OR REPLACE TEMP VIEW v_adj AS",
+     "snippet": "silver_shop.orders"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_union_by_name",
+   "to": "table:staging.adjustments",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_union_by_name.Notebook/notebook-content.py",
+     "line": 29,
+     "via": "spark.sql: SELECT a.order_id, CAST(0 AS DECIMAL(38, 6)) AS amount, COALESCE(a.adjustment_value, 0) AS adjustment",
+     "snippet": "staging.adjustments"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_union_events",
+   "to": "table:gold_shop.all_events",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_union_events.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.all_events",
+     "snippet": "gold_shop.all_events"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_union_events",
+   "to": "table:staging.a",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_union_events.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.all_events",
+     "snippet": "staging.a"
+    }
+   ]
+  },
+  {
+   "from": "notebook:nb_union_events",
+   "to": "table:staging.b",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "notebooks/nb_union_events.Notebook/notebook-content.py",
+     "line": 12,
+     "via": "spark.sql: INSERT INTO gold_shop.all_events",
+     "snippet": "staging.b"
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_copy",
+   "to": "table:cfg.load_cfg",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_copy.DataPipeline/pipeline-content.json",
+     "activity": "get_cfg",
+     "via": "Lookup query",
+     "snippet": "SELECT id FROM cfg.load_cfg WHERE enabled = 1"
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_copy",
+   "to": "table:dwh_stage.revenue_daily",
+   "kind": "writes",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_copy.DataPipeline/pipeline-content.json",
+     "activity": "copy_revenue",
+     "via": "Copy LakehouseTableSink",
+     "snippet": "dwh_stage.revenue_daily"
+    },
+    {
+     "file": "pipelines/pl_copy.DataPipeline/pipeline-content.json",
+     "activity": "truncate_stage",
+     "via": "Script",
+     "snippet": "TRUNCATE TABLE dwh_stage.revenue_daily"
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_copy",
+   "to": "table:gold_shop.revenue_daily",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_copy.DataPipeline/pipeline-content.json",
+     "activity": "copy_revenue",
+     "via": "Copy LakehouseTableSource",
+     "snippet": "gold_shop.revenue_daily"
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_dynamic",
+   "to": "table:gold_shop.orders_snapshot",
+   "kind": "reads",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_dynamic.DataPipeline/pipeline-content.json",
+     "activity": "copy_dynamic",
+     "via": "Copy LakehouseTableSource",
+     "snippet": "gold_shop.orders_snapshot"
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_dynamic",
+   "to": "unresolved:dwh_stage.@pipeline().parameters.TargetTable",
+   "kind": "writes",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "pipelines/pl_dynamic.DataPipeline/pipeline-content.json",
+     "activity": "copy_dynamic",
+     "via": "Copy LakehouseTableSink",
+     "snippet": "dwh_stage.@pipeline().parameters.TargetTable"
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_dynamic",
+   "to": "unresolved:notebook:ffffffff-0000-0000-0000-000000000000",
+   "kind": "calls",
+   "confidence": "unresolved",
+   "evidence": [
+    {
+     "file": "pipelines/pl_dynamic.DataPipeline/pipeline-content.json",
+     "activity": "run_unknown",
+     "via": "TridentNotebook",
+     "snippet": ""
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_main",
+   "to": "notebook:nb_generic_load",
+   "kind": "calls",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_main.DataPipeline/pipeline-content.json",
+     "activity": "run_generic",
+     "via": "TridentNotebook",
+     "snippet": ""
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_main",
+   "to": "notebook:nb_gold_revenue",
+   "kind": "calls",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_main.DataPipeline/pipeline-content.json",
+     "activity": "run_gold",
+     "via": "TridentNotebook",
+     "snippet": ""
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_main",
+   "to": "notebook:nb_ingest_orders",
+   "kind": "calls",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_main.DataPipeline/pipeline-content.json",
+     "activity": "run_ingest",
+     "via": "TridentNotebook",
+     "snippet": ""
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_main",
+   "to": "notebook:nb_silver_orders",
+   "kind": "calls",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_main.DataPipeline/pipeline-content.json",
+     "activity": "run_silver_orders",
+     "via": "TridentNotebook",
+     "snippet": ""
+    }
+   ]
+  },
+  {
+   "from": "pipeline:pl_main",
+   "to": "pipeline:pl_copy",
+   "kind": "calls",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "pipelines/pl_main.DataPipeline/pipeline-content.json",
+     "activity": "call_copy",
+     "via": "InvokePipeline",
+     "snippet": ""
+    }
+   ]
+  },
+  {
+   "from": "semantic_table:Shop Model.Dim Customers",
+   "to": "table:silver_shop.customers",
+   "kind": "binds",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "semantic/Shop Model.SemanticModel/definition/tables/dim_customers.tmdl",
+     "line": 1,
+     "via": "TMDL partition"
+    }
+   ]
+  },
+  {
+   "from": "semantic_table:Shop Model.orders_import",
+   "to": "table:silver_shop.orders",
+   "kind": "binds",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "semantic/Shop Model.SemanticModel/definition/tables/orders_import.tmdl",
+     "line": 1,
+     "via": "TMDL partition"
+    }
+   ]
+  },
+  {
+   "from": "semantic_table:Shop Model.revenue_daily",
+   "to": "table:gold_shop.revenue_daily",
+   "kind": "binds",
+   "confidence": "parsed",
+   "evidence": [
+    {
+     "file": "semantic/Shop Model.SemanticModel/definition/tables/revenue_daily.tmdl",
+     "line": 1,
+     "via": "TMDL partition"
+    }
+   ]
+  }
+ ],
+ "warnings": [
+  {
+   "item": "nb_broken_syntax",
+   "message": "1 cell(s) failed Python parsing; regex fallback used"
+  },
+  {
+   "item": "nb_literal_sql",
+   "message": "1 spark.sql() call(s) with SQL built at run time (line 16: c)"
+  },
+  {
+   "item": "nb_silver_loader",
+   "message": "1 spark.sql() call(s) with SQL built at run time (line 15: row['query'])"
+  },
+  {
+   "item": "resolver:load_cfg",
+   "message": "added 4 inferred edge(s)"
+  },
+  {
+   "item": "config table cfg.silver_load",
+   "message": "added 5 flow/edge link(s) from 4 row(s)"
+  }
+ ],
+ "flows": [
+  {
+   "from": "table:bronze_shop.customers",
+   "to": "table:silver_shop.orders_cfg",
+   "job": "notebook:nb_silver_loader",
+   "confidence": "parsed",
+   "evidence": {
+    "config": "cfg.silver_load",
+    "id": 1,
+    "via": "config table"
+   }
+  },
+  {
+   "from": "table:bronze_shop.orders",
+   "to": "table:silver_shop.orders_cfg",
+   "job": "notebook:nb_silver_loader",
+   "confidence": "parsed",
+   "evidence": {
+    "config": "cfg.silver_load",
+    "id": 1,
+    "via": "config table"
+   }
+  },
+  {
+   "from": "table:silver_shop.orders",
+   "to": "table:silver_shop.totals_cfg",
+   "job": "notebook:nb_silver_loader",
+   "confidence": "parsed",
+   "evidence": {
+    "config": "cfg.silver_load",
+    "id": 4,
+    "via": "config table"
+   }
+  }
+ ],
+ "columns": {
+  "schemaVersion": 1,
+  "tables": {
+   "table:bronze_shop.orders": [
+    "order_id",
+    "customer_id",
+    "order_date",
+    "amount"
+   ],
+   "table:gold_shop.order_flags": [
+    "order_id",
+    "is_big",
+    "label"
+   ],
+   "table:silver_shop.orders": [
+    "order_id",
+    "customer_id",
+    "order_date",
+    "amount",
+    "region"
+   ],
+   "table:silver_shop.customers": [
+    "customer_id",
+    "name",
+    "region"
+   ],
+   "table:gold_shop.revenue_daily": [
+    "order_date",
+    "amount"
+   ],
+   "table:staging.orders_raw": [
+    "order_id",
+    "customer_id",
+    "order_date",
+    "amount"
+   ],
+   "table:silver_shop.order_totals": [
+    "customer_id",
+    "total_amount",
+    "bonus"
+   ],
+   "table:gold_shop.orders_mlv": [
+    "order_id",
+    "amount",
+    "region"
+   ],
+   "table:bronze_shop.customers": [
+    "customer_id",
+    "name",
+    "region"
+   ],
+   "table:gold_shop.helper_out": [
+    "order_id",
+    "amount"
+   ],
+   "table:gold_shop.loop_out": [
+    "order_id"
+   ],
+   "table:staging.adjustments": [
+    "order_id",
+    "adjustment_value"
+   ],
+   "table:gold_shop.orders_adjusted": [
+    "order_id",
+    "amount",
+    "adjustment"
+   ],
+   "table:gold_shop.all_events": [
+    "id",
+    "src"
+   ],
+   "table:staging.a": [
+    "id"
+   ],
+   "table:staging.b": [
+    "id"
+   ]
+  },
+  "edges": [
+   {
+    "from": "table:staging.orders_raw",
+    "fromColumn": "amount",
+    "to": "table:bronze_shop.orders",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "orders_raw.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_ingest_orders",
+    "line": 12
+   },
+   {
+    "from": "table:staging.orders_raw",
+    "fromColumn": "customer_id",
+    "to": "table:bronze_shop.orders",
+    "toColumn": "customer_id",
+    "transform": "direct",
+    "expr": "orders_raw.customer_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_ingest_orders",
+    "line": 12
+   },
+   {
+    "from": "table:staging.orders_raw",
+    "fromColumn": "order_date",
+    "to": "table:bronze_shop.orders",
+    "toColumn": "order_date",
+    "transform": "direct",
+    "expr": "orders_raw.order_date",
+    "confidence": "parsed",
+    "job": "notebook:nb_ingest_orders",
+    "line": 12
+   },
+   {
+    "from": "table:staging.orders_raw",
+    "fromColumn": "order_id",
+    "to": "table:bronze_shop.orders",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "orders_raw.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_ingest_orders",
+    "line": 12
+   },
+   {
+    "from": "table:staging.a",
+    "fromColumn": "id",
+    "to": "table:gold_shop.all_events",
+    "toColumn": "id",
+    "transform": "direct",
+    "expr": "a.id AS id",
+    "confidence": "parsed",
+    "job": "notebook:nb_union_events",
+    "line": 12
+   },
+   {
+    "from": "table:staging.b",
+    "fromColumn": "id",
+    "to": "table:gold_shop.all_events",
+    "toColumn": "id",
+    "transform": "direct",
+    "expr": "a.id AS id",
+    "confidence": "parsed",
+    "job": "notebook:nb_union_events",
+    "line": 12
+   },
+   {
+    "from": "table:unknown_schema.t",
+    "fromColumn": "*",
+    "to": "table:gold_shop.copy_unknown",
+    "toColumn": "*",
+    "transform": "star",
+    "expr": "*",
+    "confidence": "inferred",
+    "job": "notebook:nb_star_unknown",
+    "line": 12
+   },
+   {
+    "from": "table:silver_shop.customers",
+    "fromColumn": "customer_id",
+    "to": "table:gold_shop.four_part_out",
+    "toColumn": "customer_id",
+    "transform": "direct",
+    "expr": "customers.customer_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_four_part",
+    "line": 13
+   },
+   {
+    "from": "table:silver_shop.customers",
+    "fromColumn": "name",
+    "to": "table:gold_shop.four_part_out",
+    "toColumn": "name",
+    "transform": "direct",
+    "expr": "customers.name",
+    "confidence": "parsed",
+    "job": "notebook:nb_four_part",
+    "line": 13
+   },
+   {
+    "from": "table:silver_shop.customers",
+    "fromColumn": "region",
+    "to": "table:gold_shop.four_part_out",
+    "toColumn": "region",
+    "transform": "direct",
+    "expr": "customers.region",
+    "confidence": "parsed",
+    "job": "notebook:nb_four_part",
+    "line": 13
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:gold_shop.helper_out",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "orders.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_sql_helpers",
+    "line": 17
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:gold_shop.helper_out",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "orders.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_sql_helpers",
+    "line": 17
+   },
+   {
+    "from": "table:silver_shop.customers",
+    "fromColumn": "customer_id",
+    "to": "table:gold_shop.loop_out",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "customers.customer_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_sql_helpers",
+    "line": 24
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:gold_shop.loop_out",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "orders.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_sql_helpers",
+    "line": 24
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:gold_shop.order_flags",
+    "toColumn": "is_big",
+    "transform": "expression",
+    "expr": "CASE WHEN o.amount > 100 THEN 1 ELSE 0 END",
+    "confidence": "parsed",
+    "job": "notebook:nb_col_expr",
+    "line": 12
+   },
+   {
+    "from": "table:silver_shop.customers",
+    "fromColumn": "region",
+    "to": "table:gold_shop.order_flags",
+    "toColumn": "label",
+    "transform": "expression",
+    "expr": "'x' || c.region",
+    "confidence": "parsed",
+    "job": "notebook:nb_col_expr",
+    "line": 12
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:gold_shop.order_flags",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "o.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_col_expr",
+    "line": 12
+   },
+   {
+    "from": "table:staging.adjustments",
+    "fromColumn": "adjustment_value",
+    "to": "table:gold_shop.orders_adjusted",
+    "toColumn": "adjustment",
+    "transform": "expression",
+    "expr": "COALESCE(a.adjustment_value, 0)",
+    "confidence": "parsed",
+    "job": "notebook:nb_union_by_name",
+    "line": 34
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:gold_shop.orders_adjusted",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "v_adj.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_union_by_name",
+    "line": 34
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:gold_shop.orders_adjusted",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "v_adj.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_union_by_name",
+    "line": 34
+   },
+   {
+    "from": "table:staging.adjustments",
+    "fromColumn": "order_id",
+    "to": "table:gold_shop.orders_adjusted",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "v_adj.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_union_by_name",
+    "line": 34
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:gold_shop.orders_mlv",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "o.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_mlv_orders",
+    "line": 10
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:gold_shop.orders_mlv",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "o.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_mlv_orders",
+    "line": 10
+   },
+   {
+    "from": "table:silver_shop.customers",
+    "fromColumn": "region",
+    "to": "table:gold_shop.orders_mlv",
+    "toColumn": "region",
+    "transform": "direct",
+    "expr": "c.region",
+    "confidence": "parsed",
+    "job": "notebook:nb_mlv_orders",
+    "line": 10
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:gold_shop.revenue_daily",
+    "toColumn": "amount",
+    "transform": "aggregate",
+    "expr": "SUM(o.amount)",
+    "confidence": "parsed",
+    "job": "notebook:nb_gold_revenue",
+    "line": 21
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "order_date",
+    "to": "table:gold_shop.revenue_daily",
+    "toColumn": "order_date",
+    "transform": "direct",
+    "expr": "o.order_date",
+    "confidence": "parsed",
+    "job": "notebook:nb_gold_revenue",
+    "line": 21
+   },
+   {
+    "from": "table:gold_shop.revenue_daily",
+    "fromColumn": "amount",
+    "to": "table:gold_shop.v_revenue",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "revenue_daily.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_report_view",
+    "line": 9
+   },
+   {
+    "from": "table:gold_shop.revenue_daily",
+    "fromColumn": "order_date",
+    "to": "table:gold_shop.v_revenue",
+    "toColumn": "order_date",
+    "transform": "direct",
+    "expr": "revenue_daily.order_date",
+    "confidence": "parsed",
+    "job": "notebook:nb_report_view",
+    "line": 9
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:silver_shop.chain_out",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "orders.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_chain_write",
+    "line": 12
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:silver_shop.chain_out",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "orders.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_chain_write",
+    "line": 12
+   },
+   {
+    "from": "table:bronze_shop.customers",
+    "fromColumn": "customer_id",
+    "to": "table:silver_shop.customers",
+    "toColumn": "customer_id",
+    "transform": "direct",
+    "expr": "s.customer_id",
+    "confidence": "inferred",
+    "job": "notebook:nb_silver_customers",
+    "line": 12
+   },
+   {
+    "from": "table:bronze_shop.customers",
+    "fromColumn": "name",
+    "to": "table:silver_shop.customers",
+    "toColumn": "name",
+    "transform": "direct",
+    "expr": "s.name",
+    "confidence": "inferred",
+    "job": "notebook:nb_silver_customers",
+    "line": 12
+   },
+   {
+    "from": "table:bronze_shop.customers",
+    "fromColumn": "region",
+    "to": "table:silver_shop.customers",
+    "toColumn": "region",
+    "transform": "direct",
+    "expr": "s.region",
+    "confidence": "inferred",
+    "job": "notebook:nb_silver_customers",
+    "line": 12
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "customer_id",
+    "to": "table:silver_shop.order_totals",
+    "toColumn": "customer_id",
+    "transform": "direct",
+    "expr": "s.customer_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_merge_explicit",
+    "line": 12
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:silver_shop.order_totals",
+    "toColumn": "total_amount",
+    "transform": "aggregate",
+    "expr": "SUM(orders.amount)",
+    "confidence": "parsed",
+    "job": "notebook:nb_merge_explicit",
+    "line": 12
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:silver_shop.orders",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "v_orders.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders",
+    "line": 32
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:silver_shop.orders",
+    "toColumn": "amount",
+    "transform": "direct",
+    "expr": "v_orders.amount",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders_python",
+    "line": 28
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "customer_id",
+    "to": "table:silver_shop.orders",
+    "toColumn": "customer_id",
+    "transform": "direct",
+    "expr": "v_orders.customer_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders",
+    "line": 32
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "customer_id",
+    "to": "table:silver_shop.orders",
+    "toColumn": "customer_id",
+    "transform": "direct",
+    "expr": "v_orders.customer_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders_python",
+    "line": 28
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "order_date",
+    "to": "table:silver_shop.orders",
+    "toColumn": "order_date",
+    "transform": "direct",
+    "expr": "v_orders.order_date",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders",
+    "line": 32
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "order_date",
+    "to": "table:silver_shop.orders",
+    "toColumn": "order_date",
+    "transform": "direct",
+    "expr": "v_orders.order_date",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders_python",
+    "line": 28
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:silver_shop.orders",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "v_orders.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders",
+    "line": 32
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:silver_shop.orders",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "v_orders.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders_python",
+    "line": 28
+   },
+   {
+    "from": "table:bronze_shop.customers",
+    "fromColumn": "region",
+    "to": "table:silver_shop.orders",
+    "toColumn": "region",
+    "transform": "direct",
+    "expr": "v_orders.region",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders",
+    "line": 32
+   },
+   {
+    "from": "table:bronze_shop.customers",
+    "fromColumn": "region",
+    "to": "table:silver_shop.orders",
+    "toColumn": "region",
+    "transform": "direct",
+    "expr": "v_orders.region",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_orders_python",
+    "line": 28
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:silver_shop.orders_cfg",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "o.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_loader",
+    "line": 0
+   },
+   {
+    "from": "table:bronze_shop.customers",
+    "fromColumn": "region",
+    "to": "table:silver_shop.orders_cfg",
+    "toColumn": "region",
+    "transform": "direct",
+    "expr": "c.region",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_loader",
+    "line": 0
+   },
+   {
+    "from": "table:bronze_shop.orders",
+    "fromColumn": "order_id",
+    "to": "table:silver_shop.param_out",
+    "toColumn": "order_id",
+    "transform": "direct",
+    "expr": "stg_param.order_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_param_pipeline",
+    "line": 32
+   },
+   {
+    "from": "table:bronze_shop.customers",
+    "fromColumn": "region",
+    "to": "table:silver_shop.param_out",
+    "toColumn": "region",
+    "transform": "expression",
+    "expr": "UPPER(c.region)",
+    "confidence": "parsed",
+    "job": "notebook:nb_param_pipeline",
+    "line": 32
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "customer_id",
+    "to": "table:silver_shop.totals_cfg",
+    "toColumn": "customer_id",
+    "transform": "direct",
+    "expr": "t.customer_id",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_loader",
+    "line": 0
+   },
+   {
+    "from": "table:silver_shop.orders",
+    "fromColumn": "amount",
+    "to": "table:silver_shop.totals_cfg",
+    "toColumn": "total",
+    "transform": "aggregate",
+    "expr": "SUM(orders.amount)",
+    "confidence": "parsed",
+    "job": "notebook:nb_silver_loader",
+    "line": 0
+   }
+  ],
+  "stats": {
+   "statements": 24,
+   "withEdges": 18,
+   "notAWrite": 0,
+   "failedParse": 0,
+   "failedQualify": 0,
+   "dynamicTarget": 1,
+   "ambiguousColumns": 0,
+   "unresolvedStars": 1,
+   "tempViewSources": 0,
+   "unqualifiedSources": 0,
+   "edges": 51,
+   "edgesParsed": 47,
+   "edgesInferred": 4,
+   "notebooksWithColumnEdges": 16,
+   "tablesWithKnownColumns": 16,
+   "schemaTables": 17
+  }
+ }
+}

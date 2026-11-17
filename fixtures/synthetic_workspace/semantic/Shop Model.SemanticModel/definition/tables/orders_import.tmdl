@@ -1,0 +1,11 @@
+table orders_import
+	lineageTag: a3
+
+	partition orders_import = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("server", "db"),
+				    t = Source{[Schema="silver_shop",Item="orders"]}[Data]
+				in
+				    t

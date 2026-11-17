@@ -1,0 +1,300 @@
+{
+ "schemaVersion": 1,
+ "source": "synthetic",
+ "exportedAt": "2026-10-24T00:00:00+00:00",
+ "counts": {
+  "tables": 17,
+  "userTables": 17,
+  "columns": 44
+ },
+ "tables": {
+  "staging.orders_raw": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "customer_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "order_date",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "amount",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "staging.adjustments": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "adjustment_value",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "gold_shop.helper_out": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "amount",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "gold_shop.loop_out": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "gold_shop.orders_adjusted": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "amount",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "adjustment",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "staging.a": {
+   "columns": [
+    {
+     "name": "id",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "staging.b": {
+   "columns": [
+    {
+     "name": "id",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "bronze_shop.orders": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "customer_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "order_date",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "amount",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "bronze_shop.customers": {
+   "columns": [
+    {
+     "name": "customer_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "name",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "region",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "silver_shop.orders": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "customer_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "order_date",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "amount",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "region",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "silver_shop.customers": {
+   "columns": [
+    {
+     "name": "customer_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "name",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "region",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "silver_shop.order_totals": {
+   "columns": [
+    {
+     "name": "customer_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "total_amount",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "bonus",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "gold_shop.revenue_daily": {
+   "columns": [
+    {
+     "name": "order_date",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "amount",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "gold_shop.orders_mlv": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "amount",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "region",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "gold_shop.order_flags": {
+   "columns": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "is_big",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "label",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "gold_shop.all_events": {
+   "columns": [
+    {
+     "name": "id",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "src",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  },
+  "sandbox.junk_table": {
+   "columns": [
+    {
+     "name": "x",
+     "type": "string",
+     "nullable": true
+    },
+    {
+     "name": "y",
+     "type": "string",
+     "nullable": true
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "copy_dynamic",
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "LakehouseTableSource",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "gold_shop",
+                "table": "orders_snapshot"
+              }
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "dwh_stage",
+                "table": {
+                  "value": "@pipeline().parameters.TargetTable",
+                  "type": "Expression"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "run_unknown",
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "ffffffff-0000-0000-0000-000000000000",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        }
+      }
+    ]
+  }
+}

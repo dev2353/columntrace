@@ -1,0 +1,59 @@
+{
+ "schemaVersion": 1,
+ "source": "sql-endpoint-table",
+ "table": "cfg.silver_load",
+ "truncated": false,
+ "exportedAt": "2026-10-24T00:00:00+00:00",
+ "columns": [
+  "id",
+  "table_name",
+  "enabled",
+  "is_notebook",
+  "except_columns",
+  "source_pk",
+  "target_pk",
+  "query"
+ ],
+ "rows": [
+  {
+   "id": 1,
+   "table_name": "silver_shop.orders_cfg",
+   "enabled": true,
+   "is_notebook": false,
+   "except_columns": "name",
+   "source_pk": "order_id",
+   "target_pk": "order_id",
+   "query": "SELECT o.order_id, c.region AS region, c.name AS name FROM bronze_shop.orders o JOIN bronze_shop.customers c ON o.customer_id = c.customer_id"
+  },
+  {
+   "id": 2,
+   "table_name": "silver_shop.custom_out",
+   "enabled": true,
+   "is_notebook": true,
+   "except_columns": null,
+   "source_pk": null,
+   "target_pk": null,
+   "query": "nb_custom_silver"
+  },
+  {
+   "id": 3,
+   "table_name": "silver_shop.disabled_out",
+   "enabled": false,
+   "is_notebook": false,
+   "except_columns": null,
+   "source_pk": "id",
+   "target_pk": "id",
+   "query": "SELECT * FROM bronze_shop.orders"
+  },
+  {
+   "id": 4,
+   "table_name": "silver_shop.totals_cfg",
+   "enabled": true,
+   "is_notebook": false,
+   "except_columns": null,
+   "source_pk": "customer_id",
+   "target_pk": "customer_id",
+   "query": "WITH t AS (SELECT customer_id, SUM(amount) AS total FROM silver_shop.orders GROUP BY customer_id) SELECT customer_id, total FROM t"
+  }
+ ]
+}

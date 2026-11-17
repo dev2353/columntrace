@@ -1,0 +1,9 @@
+table 'Dim Customers'
+	lineageTag: a2
+
+	partition 'Dim Customers' = entity
+		mode: directLake
+		source
+			entityName: customers
+			schemaName: silver_shop
+			expressionSource: DatabaseQuery

@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "copy_revenue",
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "LakehouseTableSource",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "gold_shop",
+                "table": "revenue_daily"
+              }
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "dwh_stage",
+                "table": "revenue_daily"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "get_cfg",
+        "type": "Lookup",
+        "typeProperties": {
+          "source": {
+            "type": "LakehouseTableSource",
+            "sqlReaderQuery": "SELECT id FROM cfg.load_cfg WHERE enabled = 1"
+          }
+        }
+      },
+      {
+        "name": "truncate_stage",
+        "type": "Script",
+        "typeProperties": {
+          "scripts": [
+            {
+              "type": "NonQuery",
+              "text": "TRUNCATE TABLE dwh_stage.revenue_daily"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

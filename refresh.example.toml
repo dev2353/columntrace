@@ -1,0 +1,38 @@
+# Settings for `columntrace refresh`. Copy this file outside the repository (or to refresh.toml,
+# which is git-ignored), fill it in and run:
+#
+#   columntrace refresh --config refresh.toml
+#
+# Paths are relative to this file. Every section except [repo] is optional; a section you leave out
+# is simply not used. Every network step is read-only.
+
+[repo]
+path = "data/my_fabric_repo"     # a git clone of the workspace's git integration folder
+branch = "main"
+pull = true                      # fetch the branch head first (local edits are kept)
+
+[dates]                          # last-change dates per item (Azure DevOps; about one call per folder)
+org = "<azure devops organization>"
+project = "<project>"
+repo = "<repository>"
+out = "data/out/dates.private.json"
+
+[schema]                         # every table and column (one INFORMATION_SCHEMA.COLUMNS query)
+server = "<id>.datawarehouse.fabric.microsoft.com"
+database = "<lakehouse>"
+out = "data/out/schema.private.json"
+csv = "data/out/columns.private.csv"
+ignore = []                      # table-name patterns to leave out, e.g. ["_uat", "staging.*"]
+
+[[config_tables]]                # repeat for each config table that drives a generic loader
+table = "cfg.my_config"
+via = "onelake"                  # read the Delta files: long text whole (pip install columntrace[onelake])
+workspace = "<workspace id or name>"
+lakehouse = "<lakehouse id or name>"
+out = "data/out/my_config.private.json"
+# via = "sql" reads through the SQL endpoint of [schema] instead (text is cut at 8000 characters)
+
+[extract]
+out = "data/out/lineage.private.json"   # the previous file is kept as lineage.previous.private.json
+stale_days = 365
+no_evidence = false              # true leaves code snippets out of the file

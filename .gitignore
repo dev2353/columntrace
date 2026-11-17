@@ -1,0 +1,29 @@
+# Real workspace data and generated output must never be committed.
+data/
+out/
+*.private.json
+*.private.md
+*.private.csv
+refresh.toml
+.publiccheck.local
+
+# Python
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+
+# UI
+node_modules/
+ui/dist/
+.env.local
+.env*.local
+
+# Editors and local tools
+.claude/
+.vscode/
+.idea/
+.DS_Store

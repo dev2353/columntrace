@@ -1,0 +1,129 @@
+{
+ "schemaVersion": 1,
+ "source": "synthetic",
+ "branch": "main",
+ "fetchedAt": "2026-10-24T00:00:00+00:00",
+ "apiCalls": 0,
+ "items": {
+  "notebooks/nb_ingest_orders.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_silver_orders.Notebook": {
+   "lastChange": "2026-01-10T09:00:00Z",
+   "commit": "bbbb0002"
+  },
+  "notebooks/nb_silver_customers.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_gold_revenue.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_dynamic_export.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_helper_loader.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_orchestrator.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_generic_load.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_report_view.Notebook": {
+   "lastChange": "2024-02-01T09:00:00Z",
+   "commit": "eeee0005"
+  },
+  "notebooks/nb_broken_syntax.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_delta_api.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_no_tables.Notebook": {
+   "lastChange": "2023-05-01T09:00:00Z",
+   "commit": "dddd0004"
+  },
+  "notebooks/nb_mlv_orders.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_duckdb_report.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_literal_sql.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_four_part.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_silver_orders_python.Notebook": {
+   "lastChange": "2026-09-01T09:00:00Z",
+   "commit": "cccc0003"
+  },
+  "notebooks/nb_col_expr.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_union_events.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_merge_explicit.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_star_unknown.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_silver_loader.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_custom_silver.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_param_pipeline.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_chain_write.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_sql_helpers.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "notebooks/nb_union_by_name.Notebook": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "pipelines/pl_main.DataPipeline": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "pipelines/pl_copy.DataPipeline": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  },
+  "pipelines/pl_dynamic.DataPipeline": {
+   "lastChange": "2026-10-01T09:00:00Z",
+   "commit": "aaaa0001"
+  }
+ }
+}

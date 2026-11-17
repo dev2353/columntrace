@@ -1,0 +1,12 @@
+{
+  "start": "silver_shop.orders",
+  "depth": "auto",
+  "tablesPerSide": 50,
+  "hide": { "views": true, "tmp": true, "bkp": true, "ml": true, "patterns": [] },
+  "alwaysShow": [],
+  "jobs": "all",
+  "evidence": ["parsed", "inferred", "unresolved"],
+  "configResolved": false,
+  "show": { "semanticTables": true, "unresolvedNames": false },
+  "broadJobPairs": 24
+}

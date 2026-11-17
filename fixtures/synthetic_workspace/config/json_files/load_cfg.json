@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "src_name": "SHOP",
+    "src_table": "Orders",
+    "dest_table_schema": "bronze_shop",
+    "dest_table": "orders",
+    "enabled": true
+  },
+  {
+    "id": 2,
+    "src_name": "SHOP",
+    "src_table": "Customers",
+    "dest_table_schema": "bronze_shop",
+    "dest_table": "customers",
+    "enabled": true
+  },
+  {
+    "id": 3,
+    "src_name": "SHOP",
+    "src_table": "Returns",
+    "dest_table_schema": "bronze_shop",
+    "dest_table": "returns",
+    "enabled": false
+  }
+]

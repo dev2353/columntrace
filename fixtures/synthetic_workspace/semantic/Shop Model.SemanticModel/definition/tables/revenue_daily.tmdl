@@ -1,0 +1,14 @@
+table revenue_daily
+	lineageTag: a1
+
+	measure 'Total Revenue' = SUM(revenue_daily[amount])
+
+	column amount
+		sourceColumn: amount
+
+	partition revenue_daily = entity
+		mode: directLake
+		source
+			entityName: revenue_daily
+			schemaName: gold_shop
+			expressionSource: DatabaseQuery
