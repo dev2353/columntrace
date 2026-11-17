@@ -19,8 +19,16 @@ schema export ──────┼──>  columntrace extract  ──>  lineag
 config-table rows ──┘   (optional)                                      Tables · Columns · Schemas · All tables
 ```
 
-**Try it now:** open [`demo/index.html`](demo/index.html) in a browser. It is one self-contained page
+**Try it now:** the [live demo](https://dev2353.github.io/columntrace/), or open [`demo/index.html`](demo/index.html) locally. It is one self-contained page
 with a synthetic workspace (no install, no server).
+
+![Tables view: a table, what feeds it and what it feeds](docs/img/tables-view.png)
+
+*Tables view: one table in focus, its sources on the left and its consumers on the right.*
+
+![Columns view: a column traced back to the SQL that computes it](docs/img/columns-view.png)
+
+*Columns view: where a number comes from, with the expression (`SUM(o.amount)`) and the notebook line.*
 
 ## Quick start
 
@@ -98,13 +106,16 @@ columntrace/
 ├── LICENSE                 MIT
 ├── pyproject.toml          package, extras (dev, sql, onelake), ruff and pytest settings
 ├── refresh.example.toml    settings template for `columntrace refresh`
-├── .github/workflows/ci.yml  lint, tests, fixture regeneration check, leak check, UI tests and build
+├── .github/workflows/
+│   ├── ci.yml              lint, tests, fixture regeneration check, leak check, UI tests and build
+│   └── pages.yml           publishes demo/ to GitHub Pages
 ├── demo/
 │   └── index.html          self-contained demo page (UI + synthetic sample), opens from disk
 ├── docs/
 │   ├── how-it-works.md     extraction, confidence, liveness, column lineage, config tables, limits
 │   ├── cli.md              every command and option
-│   └── lineage-format.md   the lineage.json contract between extractor and UI
+│   ├── lineage-format.md   the lineage.json contract between extractor and UI
+│   └── img/                screenshots used in this README (synthetic sample)
 ├── src/columntrace/        the extractor (Python, one dependency: sqlglot)
 │   ├── cli.py              command line entry point
 │   ├── extract.py          walks the repo and builds the graph
